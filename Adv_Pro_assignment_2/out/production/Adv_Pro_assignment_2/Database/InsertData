@@ -1,0 +1,37 @@
+package Database;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class InsertData {
+
+    public static void main(String[] args) {
+
+        //  final String DB_NAME = "testDB";
+        Connection con = null;
+        Statement stmt = null;
+        int result = 0;
+
+        try  {
+
+
+            Class.forName("org.hsqldb.jdbc.JDBCDriver");
+            con = DriverManager.getConnection("jdbc:hsqldb:hsql://localhost/testdb" , "SA", "");
+            stmt = con.createStatement();
+
+            stmt.executeUpdate("INSERT INTO Post  (ID , Title ,Description ,Creator_id, Status, Venue ,Date_of_event,Capacity,No_Of_attendees ) values" +
+                    "(pos.getpostID(),pos.getTitle(),pos.getDescription(),pos.getCreator_id(),pos.getStatus(),eve.getVenue(),eve.getdate_of_event()," +
+                    "eve.getCapacity(),eve.getattendee_count())");
+            con.commit();
+
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace(System.out);
+        }
+        System.out.println(result +" rows affected");
+        System.out.println("rows inserted successfully");
+    }
+}
