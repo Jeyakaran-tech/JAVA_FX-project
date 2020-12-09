@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.mainwindow">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="667.0" style="-fx-background-color: #26a69a;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Unilink">
+            <items>
+              <MenuItem fx:id="developerInfo" mnemonicParsing="false" onAction="#developerInfo" text="Developer Information" />
+                  <MenuItem fx:id="quitButton" mnemonicParsing="false" onAction="#quitAction" text="Quit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Data">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#exportDataAction" text="Èxport" />
+                  <MenuItem mnemonicParsing="false" onAction="#importDatafromFile" text="Import" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ToolBar layoutX="7.0" layoutY="27.0" prefHeight="40.0" prefWidth="593.0" style="-fx-background-color: #ef5350;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <items>
+          <Button fx:id="eventbutton" mnemonicParsing="false" onAction="#eventbutton" style="-fx-background-color: #424242;" text="New Event post" textFill="#e2d7d7" />
+            <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#salebutton" style="-fx-background-color: #424242;" text="New Sale post" textFill="#d9d2d2" />
+            <Button layoutX="113.0" layoutY="13.0" mnemonicParsing="false" onAction="#jobbutton" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #424242;" text="New Job post" textFill="#e9dddd" />
+            <Label text="Type:" />
+            <ChoiceBox fx:id="Typeselector" prefHeight="25.0" prefWidth="76.0" value="All" />
+            <Label text="Status:" />
+            <ChoiceBox fx:id="Statusselector" layoutX="338.0" layoutY="13.0" prefHeight="25.0" prefWidth="73.0" />
+            <Label layoutX="409.0" layoutY="17.0" text="Creator:" />
+            <ChoiceBox fx:id="Creatorselector" layoutX="449.0" layoutY="13.0" prefHeight="25.0" prefWidth="69.0" />
+        </items>
+      </ToolBar>
+      <Label fx:id="IDlabel" layoutX="306.0" layoutY="78.0" text="Label" />
+      <Button fx:id="refreshButton" layoutX="584.0" layoutY="74.0" mnemonicParsing="false" onAction="#onRefresh" style="-fx-background-color: #424242;" text="Refresh" textFill="#f6f0f0" />
+      <ListView fx:id="listContents" layoutY="107.0" prefHeight="343.0" prefWidth="662.0" />
+      <Button layoutX="8.0" layoutY="73.0" mnemonicParsing="false" onAction="#Logouthandler" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #424242;" text="Log out" textFill="#e2d9d9" />
+   </children>
+</AnchorPane>

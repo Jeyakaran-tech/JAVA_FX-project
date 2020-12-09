@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="407.0" prefWidth="667.0" style="-fx-background-color: #26a69a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.newsale">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="296.0" prefHeight="58.0" prefWidth="667.0" style="-fx-background-color: #bf5f82;" text="Welcome to the Sale creation page!!!" textFill="#fffbfb" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="151.0" layoutY="105.0" text="Enter the name of the item" textFill="#ffffff">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="151.0" layoutY="147.0" text="Describe your item" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="151.0" layoutY="186.0" text="Asking price" textFill="#fff8f8">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="151.0" layoutY="228.0" text="Minimum raise" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font></Label>
+      <TextField fx:id="itemname" layoutX="334.0" layoutY="101.0" />
+      <TextField fx:id="itemdescription" layoutX="334.0" layoutY="143.0" />
+      <TextField fx:id="askingprice" layoutX="334.0" layoutY="182.0" />
+      <TextField fx:id="minimumraise" layoutX="334.0" layoutY="224.0" />
+      <Button layoutX="292.0" layoutY="337.0" mnemonicParsing="false" onAction="#Buttonhandler" style="-fx-background-color: #424242;" text="Create" textFill="WHITE" />
+      <Button layoutX="533.0" layoutY="17.0" mnemonicParsing="false" onAction="#Backbutton" style="-fx-background-color: #424242;" text="Go to Main window" textFill="#efe4e4" />
+      <Label layoutX="153.0" layoutY="270.0" text="Upload Image" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="uploadImage" layoutX="336.0" layoutY="266.0" mnemonicParsing="false" onAction="#uploadImageAction" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #424242;" text="Upload Image" textFill="WHITE" />
+   </children>
+</AnchorPane>
